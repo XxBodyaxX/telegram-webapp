@@ -1,8 +1,71 @@
-body { font-family: sans-serif; margin:0; padding:0; }
-header { display:flex; justify-content: space-around; background:#eee; padding:10px; }
-button { cursor:pointer; }
-#gallery { display:flex; flex-wrap: wrap; gap:10px; margin-top:10px; }
-.post { border:1px solid #ccc; padding:5px; width:150px; }
-.post img { width:100%; }
-.modal { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); display:flex; justify-content:center; align-items:center; }
-.modal-content { background:#fff; padding:20px; border-radius:10px; }
+body {
+  background: url('halloween-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  font-family: 'Creepster', cursive;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+nav a {
+  font-size: 1.5rem;
+  margin: 0 10px;
+  padding: 5px 10px;
+  color: orange;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ff6347;
+  text-shadow: 0 0 5px #ff6347;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.filters input {
+  margin: 5px;
+  padding: 5px;
+}
+
+.post {
+  background: rgba(0,0,0,0.5);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.post img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top:0; left:0; width:100%; height:100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
