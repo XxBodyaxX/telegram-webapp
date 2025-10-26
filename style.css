@@ -21,9 +21,9 @@ nav a {
   font-weight: bold;
 }
 
-nav a:hover {
-  color: #ff6347;
-  text-shadow: 0 0 5px #ff6347;
+nav a.active {
+  border-bottom: 2px solid orange;
+  font-weight: bold;
 }
 
 main {
@@ -43,11 +43,23 @@ main {
   margin: 10px 0;
   border-radius: 8px;
   box-shadow: 0 0 10px orange;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .post img {
-  max-width: 100%;
+  max-width: 300px;
   border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 5px;
 }
 
 .modal {

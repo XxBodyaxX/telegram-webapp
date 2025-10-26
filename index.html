@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Telegram + Google Галерея</title>
 <link rel="stylesheet" href="style.css">
-<script src="https://accounts.google.com/gsi/client" async defer></script>
+
+<!-- Telegram Login -->
 <script async src="https://telegram.org/js/telegram-widget.js?7"
         data-telegram-login="YOUR_BOT_USERNAME"
         data-size="large"
@@ -13,20 +14,26 @@
         data-radius="10"
         data-auth-url="/auth/telegram"
         data-request-access="write"></script>
+
+<!-- Google Identity -->
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
 </head>
 <body>
 <header>
   <h1>Добро пожаловать, <span id="username">Гость</span>!</h1>
   <nav>
-    <a href="#" id="profileTab">Профиль</a>
+    <a href="#" id="profileTab" class="active">Профиль</a>
     <a href="#" id="galleryTab">Галерея</a>
   </nav>
+  <div id="gSignIn" style="margin-top:10px;"></div>
 </header>
 
 <main>
   <section id="profileSection">
     <h2>Профиль</h2>
-    <p>ID пользователя: <span id="userId">guest</span></p>
+    <p>Авторизованный пользователь: <span id="userId">Гость</span></p>
+    <img id="userAvatar" src="default-avatar.png" class="avatar">
     <button id="addPostBtn">Добавить пост</button>
     <div id="adminSection" style="margin-top:10px;"></div>
   </section>
